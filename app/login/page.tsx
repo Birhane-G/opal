@@ -49,10 +49,19 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-2">
       <div className="w-full max-w-md">
-        <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold text-blue-900 mb-2">Opal SACCO</h1>
+        <div className="mb-2 text-center">
+          <div className="flex flex-col items-center">
+            <img
+              src="/logo.png"
+              alt="Opal SACCO logo"
+              className="h-26 w-26 object-contain"
+            />
+            <h1 className="text-4xl font-bold text-blue-900 mb-2">
+              Opal SACCO
+            </h1>
+          </div>
           <p className="text-blue-700">Savings and Credit Cooperative</p>
         </div>
 
@@ -105,8 +114,8 @@ export default function LoginPage() {
                 {isLoading ? "Logging in..." : "Login"}
               </Button>
             </form>
-
-            <div className="mt-6 text-center text-sm text-gray-600">
+            {/* user can't register by him self for now */}
+            {/* <div className="mt-6 text-center text-sm text-gray-600">
               Don't have an account?{" "}
               <Link
                 href="/register"
@@ -114,7 +123,7 @@ export default function LoginPage() {
               >
                 Register here
               </Link>
-            </div>
+            </div> */}
           </CardContent>
         </Card>
 

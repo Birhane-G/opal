@@ -214,9 +214,16 @@ export default function DashboardSidebar({
         }`}
       >
         <div className="flex flex-col h-full">
-          <div className="p-6 border-b border-blue-800">
-            <h1 className="text-2xl font-bold">Opal</h1>
-            <p className="text-sm text-blue-300">SACCO Portal</p>
+          <div className="flex items-center gap-3 p-4 border-b border-blue-800">
+            <img
+              src="/logo-light.png"
+              alt="Opal SACCO logo"
+              className="h-14 w-14 object-contain"
+            />
+            <div>
+              <h1 className="text-2xl font-bold">Opal</h1>
+              <p className="text-sm text-blue-300">SACCO Portal</p>
+            </div>
           </div>
 
           <div className="p-4 border-b border-blue-800">
