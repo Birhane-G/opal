@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
     if (!user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
-    
+
     const { data: userData } = await supabase
       .from("users")
       .select("role")
@@ -57,7 +57,6 @@ export async function GET(request: NextRequest) {
         share_capital: memberDetailsMap.get(user.id)?.share_capital || 0,
         shares_held: memberDetailsMap.get(user.id)?.shares_held || 0,
       }));
-
       return NextResponse.json({ members: enrichedMembers });
     }
 

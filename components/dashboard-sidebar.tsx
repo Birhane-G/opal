@@ -151,6 +151,38 @@ const roleNavigation: Record<string, NavItem[]> = {
       icon: <FileText className="w-5 h-5" />,
     },
   ],
+  auditor: [
+    {
+      label: "Dashboard",
+      href: "/dashboard/auditor",
+      icon: <Home className="w-5 h-5" />,
+    },
+    {
+      label: "Audit Logs",
+      href: "/auditor/audit-logs",
+      icon: <FileText className="w-5 h-5" />,
+    },
+    // {
+    //   label: "Reports",
+    //   href: "/auditor/reports",
+    //   icon: <BarChart3 className="w-5 h-5" />,
+    // },
+    // {
+    //   label: "Transactions",
+    //   href: "/auditor/transactions",
+    //   icon: <DollarSign className="w-5 h-5" />,
+    // },
+    // {
+    //   label: "Members",
+    //   href: "/auditor/members",
+    //   icon: <Users className="w-5 h-5" />,
+    // },
+    // {
+    //   label: "Loans",
+    //   href: "/auditor/loans",
+    //   icon: <CreditCard className="w-5 h-5" />,
+    // },
+  ],
   member: [
     {
       label: "Dashboard",
@@ -195,7 +227,7 @@ export default function DashboardSidebar({
       await fetch("/api/auth/logout", { method: "POST" });
       router.push("/login");
     } catch (error) {
-      console.error("Logout failed:", error);
+      console.error(error);
     }
   };
 
@@ -258,7 +290,6 @@ export default function DashboardSidebar({
               })}
             </ul>
           </nav>
-
           <div className="p-4 border-t border-blue-800">
             <Button
               onClick={handleLogout}
