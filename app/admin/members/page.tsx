@@ -161,7 +161,7 @@ export default function AdminMembersPage() {
                       </td>
                       <td className="px-6 py-4 text-sm">
                         <Button variant="outline" size="sm">
-                          View Details
+                          View
                         </Button>
                       </td>
                     </tr>
