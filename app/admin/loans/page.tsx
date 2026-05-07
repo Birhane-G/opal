@@ -11,6 +11,7 @@ interface Loan {
   status: string
   created_at: string
   disbursed_amount: number
+
 }
 
 export default function AdminLoansPage() {
